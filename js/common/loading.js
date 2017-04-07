@@ -1,0 +1,9 @@
+define(['jquery'],function($){//只依赖于jq
+    (function(){
+        $(document).on('ajaxStart',function(){//这里运用了一个ajaxStart事件
+            $('.overlay').show();//显示齿轮
+        }).on('ajaxStop',function(){//这里运用了ajaxStop事件
+            $('.overlay').hide();//请求完毕,关闭齿轮
+        })
+    })();
+})
